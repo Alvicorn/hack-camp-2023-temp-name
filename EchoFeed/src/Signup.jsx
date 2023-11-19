@@ -8,9 +8,13 @@ function Signup() {
   const navigate = useNavigate();
 
 
-  const handleButtonClick = () => {
+  const handleButtonLogin = () => {
     navigate('/login');
   };
+
+  const handleButtonRegister = () => {
+    navigate('/onboarding')
+  }
 
 
   return (
@@ -81,12 +85,12 @@ function Signup() {
           </div>
 
           <div id="btn">
-            <button type="submit" class="submit-btn">Create Account</button>
+            <button onClick={handleButtonRegister} type="submit" class="submit-btn">Create Account</button>
 
             <div class="btn-text">
               Already have an account?
               
-              <a onClick={handleButtonClick} class="btn-text-highlight" ahref="" >Log in</a>
+              <a onClick={handleButtonLogin} class="btn-text-highlight" ahref="" > Log in</a>
             </div>
           </div>
         </div>
