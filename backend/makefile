@@ -1,4 +1,4 @@
 .PHONY: start
 
-start_server:
-	PYTHONPATH=. pipenv run python3 main.py
+start:
+	PYTHONPATH=. pipenv run python3 server.py
