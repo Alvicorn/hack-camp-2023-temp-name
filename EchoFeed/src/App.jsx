@@ -19,9 +19,8 @@ function App() {
           <div className="app-header-right">
             <p className="app-header-right-text">Text size</p>
             <div className = "app-header-text-buttons">
-              <button className="app-header-text-button">About</button>
-              <button className="app-header-text-button">Contact</button>
-              <button className="app-header-text-button">Login</button>
+              <button className="app-header-text-button" id="smaller">Aa</button>
+              <button className="app-header-text-button" id="bigger">Aa</button>
             </div>
           </div>
         </div>
