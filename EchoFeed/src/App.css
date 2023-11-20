@@ -154,14 +154,22 @@ button:focus-visible {
   align-items: center;
 }
 
+
+/* to fix "EchoFree" disappearing
+.app-header-title {
+  min-width: 20vw;
+} */
+
+
 .app-header-text-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* this is for the changing size of text. implement later if time
 .app-header-text-button {
-  
-}
+ 
+} */
 
 

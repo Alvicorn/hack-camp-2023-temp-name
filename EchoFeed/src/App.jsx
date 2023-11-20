@@ -8,7 +8,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [rightSectionInfo, setRightSectionInfo] = useState({
+    title: '',
+    category: '',
+    summary: '',
+    linkFull: '',
+  });
+
+  const handleCardClick = ({ title, category, summary, linkFull }) => {
+     setRightSectionInfo({
+      ...rightSectionInfo,
+      title: title, 
+      category: category, 
+      summary: summary, 
+      linkFull: linkFull 
+    });
+  };
 
   return (
     <div className="bg">
@@ -24,19 +39,53 @@ function App() {
           </div>
         </div>
         <div className="feed-container">
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
-          <News imageSrc={reactLogo} title="React" category="JavaScript" buttonText="Learn More" />
+        <News
+            title="React"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Hi"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+        // bigger right now because it has more text
+            title="Just checking"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Love"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Fire"
+            category="With Water"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="React"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
         </div>
       </div>
       <div className="player-container">
-        <Player title="What's up world"
-        image={reactLogo}
-        summary="Some random stuff for now for summmary"
-        linknews="https://www.ft.com/content/a83f9ee7-8386-4996-b871-3d6c5a77c324"
+        <Player {...rightSectionInfo}
         // implement reader
         />
       </div>
