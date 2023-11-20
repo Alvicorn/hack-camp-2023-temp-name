@@ -24,10 +24,12 @@ class Summarizer:
                 {"input_name": "source_urls", "value": urls}
             ]
 		}
-        run_id = requests.post(request_url, headers=self.headers, json=data).json().split("=")[1]
+        runner = requests.post(request_url, headers=self.headers, json=data)
+        print(runner.json())
+        run_id = runner.json().split("=")[1]
                 
         retries = 0
-        while retries < 100:
+        while retries < 1000:
             print(f"retry: {retries}")
             response = requests.get(response_url + run_id, headers=self.headers).json()
             if response["state"] == "DONE":

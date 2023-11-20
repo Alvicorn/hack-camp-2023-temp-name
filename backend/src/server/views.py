@@ -8,21 +8,34 @@ from flask_login import login_required, current_user
 from .models import User, Topic, TrustedSite, Article
 from . import db
 from .summarizer import Summarizer
+from .news import News
 
 
 views = Blueprint("views", __name__)
 env = dotenv_values(".env")
 summarizer = Summarizer(env["AGENT_HUB_API_KEY"], env["X_AUTH_KEY"])
+news = News(env["NEWS_API_KEY"])
 
 
 @views.route("/")
 @login_required
 def home():
     if request.method == "GET":
-        urls = [
-            "https://www.cbc.ca/news/world/rosalynn-carter-obit-1.7032327",
-            "https://www.theglobeandmail.com/world/article-hamas-battles-israeli-forces-in-north-gaza-hostage-deal-report-denied/"
-        ]
+        articles = news.get_articles(["world"], ["abc-news"])  
+        print(json.dumps(articles, indent=4))        
+        formatted_articles = []    
+        for article in articles["articles"]:
+            print(json.dumps(article, indent=4))
+            formatted_article = {
+                "title": article["title"],
+                "source_url": article["url"],
+                "image_url": article["urlToImage"],
+            }        
+            formatted_articles.append(formatted_article)
+        
+        urls = [ article["source_url"] for article in formatted_articles]
+        
+      
         summaries = summarizer.summarize(urls)
         if summaries is None:
             return jsonify({
