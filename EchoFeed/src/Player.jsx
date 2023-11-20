@@ -5,23 +5,23 @@ import './Player.css'
 
 function Player(props) {
     // where title is headline title, image taken from news, summary from AgentHub, link to full page, reader as speech to text
-    const { title, image, summary, linkNews, reader } = props;
+    const { title, category, summary, linkFull} = props;
 
     return (
         <>
         <div className="player-container">
+            <div className="player-category">
+                <h3>{category}</h3>
+            </div>
             <div className = "player-title">
                 <h1>{title}</h1>
             </div>
-            <div className="image-container">
-                <img src={image} alt="News" className="news-image" />
-            </div>
             <div className="content-container">
                 <p className="news-summary">{summary}</p>
-                <a href={linkNews} className="news-link">View full</a>
+                <a href={linkFull} className="news-link">View full</a>
             </div>
             <div className= "player-reader">
-                <button className="news-button">{reader}</button>
+                <button className="news-button">Reader</button>
             </div>
         </div>
         </>
