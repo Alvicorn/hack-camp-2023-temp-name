@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import './App.css'
 import './Player.css'
 import microphone from './assets/microphone.png'
@@ -8,15 +8,19 @@ function Player(props) {
     // where title is headline title, image taken from news, summary from AgentHub, link to full page, reader as speech to text
     const { title, category, summary, linkFull} = props;
 
-    let isDefaultState = true;
+    const [defaultState, setDefaultState] = useState(true);
 
     const  defaultText= "Click on an article to view and play audio";
     const defaultImage = microphone;
 
+    useEffect(() => {
+        setDefaultState(title === '' && category === '' && summary === '' && linkFull === '');
+    }, [title, category, summary, linkFull]);
+
     return (
         <>
         
-        {isDefaultState && (
+        {defaultState && (
             <div className="player-container">
                 <div className="default-image-container">
                     {/* Render the image only if it's the default state */}
@@ -28,7 +32,7 @@ function Player(props) {
             </div>
         )}
         
-        {!isDefaultState && (
+        {!defaultState && (
             <div className="player-container">
                 <div className="player-category">
                     <h3>{category}</h3>

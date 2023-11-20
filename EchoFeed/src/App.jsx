@@ -10,14 +10,20 @@ import './index.css';
 
 function App() {
   const [rightSectionInfo, setRightSectionInfo] = useState({
-    title: 'Default Title',
-    category: 'Default Category',
-    summary: 'Default Summary',
-    linkFull: 'Default Link',
+    title: '',
+    category: '',
+    summary: '',
+    linkFull: '',
   });
 
   const handleCardClick = ({ title, category, summary, linkFull }) => {
-    setRightSectionInfo({ title, category, summary, linkFull });
+     setRightSectionInfo({
+      ...rightSectionInfo,
+      title: title, 
+      category: category, 
+      summary: summary, 
+      linkFull: linkFull 
+    });
   };
 
   return (
@@ -42,29 +48,30 @@ function App() {
             onClick={handleCardClick}
           />
         <News
-            title="React"
+            title="Hi"
             category="JavaScript"
             buttonText="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
-            title="React"
+        // bigger right now because it has more text
+            title="Just checking"
             category="JavaScript"
             buttonText="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
-            title="React"
+            title="Love"
             category="JavaScript"
             buttonText="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
-            title="React"
-            category="JavaScript"
+            title="Fire"
+            category="With Water"
             buttonText="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
