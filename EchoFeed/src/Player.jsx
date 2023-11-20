@@ -17,6 +17,13 @@ function Player(props) {
         setDefaultState(title === '' && category === '' && summary === '' && linkFull === '');
     }, [title, category, summary, linkFull]);
 
+    // For text to speech
+    const synth = window.speechSynthesis;
+    const speakSummary = () => {
+        const utterance = new SpeechSynthesisUtterance(summary);
+        synth.speak(utterance);
+      };
+
     return (
         <>
         
@@ -43,9 +50,12 @@ function Player(props) {
                 <div className="player-summary">
                     <p>{summary}</p>
                 </div>
+                <div className="player-link">
+                    <a href={linkFull} target="_blank" rel="noreferrer">Read Full Article</a>
+                </div>
                 <div className="player-reader">
                     {/* Your reader button or any other content specific to the Player */}
-                    <button className="news-button">Reader</button>
+                    <button className="news-button" onClick={speakSummary}>Reader</button>
                 </div>
             </div>
         )}

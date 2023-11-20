@@ -43,14 +43,14 @@ function App() {
         <News
             title="React"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
             title="Hi"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
@@ -58,28 +58,28 @@ function App() {
         // bigger right now because it has more text
             title="Just checking"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
             title="Love"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
             title="Fire"
             category="With Water"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
             title="React"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />

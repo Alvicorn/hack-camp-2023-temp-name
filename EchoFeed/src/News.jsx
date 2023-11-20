@@ -17,6 +17,7 @@ function News(props) {
                 <h2 className="news-title">{title}</h2>
                 <p className="news-category">{category}</p>
                 {/* insert play button here */}
+                {/* <p className="news-summary">{summary}</p> */}
                 <img src={playcircle} alt="Play" className="news-play" />
             </div>
         </div>
