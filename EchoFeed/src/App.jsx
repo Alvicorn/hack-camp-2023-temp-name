@@ -10,14 +10,20 @@ import './index.css';
 
 function App() {
   const [rightSectionInfo, setRightSectionInfo] = useState({
-    title: 'Default Title',
-    category: 'Default Category',
-    summary: 'Default Summary',
-    linkFull: 'Default Link',
+    title: '',
+    category: '',
+    summary: '',
+    linkFull: '',
   });
 
   const handleCardClick = ({ title, category, summary, linkFull }) => {
-    setRightSectionInfo({ title, category, summary, linkFull });
+     setRightSectionInfo({
+      ...rightSectionInfo,
+      title: title, 
+      category: category, 
+      summary: summary, 
+      linkFull: linkFull 
+    });
   };
 
   return (
@@ -37,42 +43,43 @@ function App() {
         <News
             title="React"
             category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Hi"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+        // bigger right now because it has more text
+            title="Just checking"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Love"
+            category="JavaScript"
+            summary="Learn More"
+            linkFull="Link for React"
+            onClick={handleCardClick}
+          />
+        <News
+            title="Fire"
+            category="With Water"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />
         <News
             title="React"
             category="JavaScript"
-            buttonText="Learn More"
-            linkFull="Link for React"
-            onClick={handleCardClick}
-          />
-        <News
-            title="React"
-            category="JavaScript"
-            buttonText="Learn More"
-            linkFull="Link for React"
-            onClick={handleCardClick}
-          />
-        <News
-            title="React"
-            category="JavaScript"
-            buttonText="Learn More"
-            linkFull="Link for React"
-            onClick={handleCardClick}
-          />
-        <News
-            title="React"
-            category="JavaScript"
-            buttonText="Learn More"
-            linkFull="Link for React"
-            onClick={handleCardClick}
-          />
-        <News
-            title="React"
-            category="JavaScript"
-            buttonText="Learn More"
+            summary="Learn More"
             linkFull="Link for React"
             onClick={handleCardClick}
           />

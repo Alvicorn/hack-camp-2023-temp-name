@@ -2,3 +2,8 @@
     padding: 20px;
     background-color: #B9DBCF;
 }
+
+.default-image-container img {
+    width: auto;
+    height: auto;
+}
