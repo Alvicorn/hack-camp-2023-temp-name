@@ -2,20 +2,22 @@ import React from 'react'
 import { useState } from "react"
 import './App.css'
 import './News.css'
+// import playcircle.png
+import playcircle from './assets/play_circle.png'
 
 function News(props) {
-    const { imageSrc, title, category, buttonText } = props;
+    // don't include image for now
+    const {title, category, summary, linkFull, onClick} = props;
 
+    // category and link from API, title from fetched API, summary from AgentHub
     return (
         <>
-        <div className="news-container">
-            <div className="image-container col-4">
-                <img src={imageSrc} alt="News" className="news-image" />
-            </div>
+        <div className="news-container" onClick={() => onClick({title, category, summary, linkFull})}>
             <div className="content-container col-8">
                 <h2 className="news-title">{title}</h2>
                 <p className="news-category">{category}</p>
-                <button className="news-button">{buttonText}</button>
+                {/* insert play button here */}
+                <img src={playcircle} alt="Play" className="news-play" />
             </div>
         </div>
         </>
