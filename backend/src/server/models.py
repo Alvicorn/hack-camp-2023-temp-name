@@ -64,18 +64,3 @@ class User(db.Model, UserMixin):
         return (f"<User: {self.email} | saved topics: {self.saved_topics}"
                 + f"| saved trusted sites: {self.saved_trusted_sites}"
                 * f"| saved articles: {self.saved_articles}>")
-        
-# class Task(db.Model):
-#     task_id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String(1000), nullable=False)
-#     completed = db.Column(db.Boolean, default=False)
-#     user_id = db.Column(db.Integer, db.ForeignKey("user.user_id"), nullable=False)
-#     date = db.Column(db.DateTime(timezone=True), default=datetime.now)
-   
-#     def get_id(self):
-#         return self.task_id
-
-#     def __repr__(self):
-#         return (f"task_id: {self.task_id}, title: {self.title}, " 
-#                 + f"completed: {self.completed}, user_id: {self.user_id}, date: {self.date}"
-#                 )
