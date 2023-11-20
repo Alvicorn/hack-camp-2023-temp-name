@@ -1,14 +1,15 @@
-import { useState } from 'react'
 import logoImg from './assets/loginlogo.png'
-import viteLogo from '/vite.svg'
 import './Signup.css'
 import { useNavigate } from 'react-router-dom';
 
 function Signup() {
   const navigate = useNavigate();
 
+  const handleButtonCreate = () => {
+    navigate('/onboarding');
+  };
 
-  const handleButtonClick = () => {
+  const handleButtonLogin = () => {
     navigate('/login');
   };
 
@@ -18,27 +19,27 @@ function Signup() {
       <div id="container">
         <div id="padding-image-div">
         <div id="image-sec">
-            <div class="logo">EchoFeed</div>
+            <div className="logo">EchoFeed</div>
             <img src={logoImg} alt="The logo of EchoFeed" />
         </div>
       </div>
 
       <form action="" method="">
         <div id="login-sec">
-          <h1 class="form-header">Welcome to EchoFeed!</h1>
+          <h1 className="form-header">Welcome to EchoFeed!</h1>
 
-          <div class="input-container">
-            <label for="first_name">First Name</label>
+          <div className="input-container">
+            <label htmlFor="first_name">First Name</label>
             <input type="text" id="first_name" name="first_name" required />
           </div>
 
-          <div class="input-container">
-            <label for="last_name">Last Name</label>
+          <div className="input-container">
+            <label htmlFor="last_name">Last Name</label>
             <input type="text" id="last_name" name="last_name" required />
           </div>
 
-          <div class="input-container">
-            <label for="user_email">Email</label>
+          <div className="input-container">
+            <label htmlFor="user_email">Email</label>
             <input
               type="email"
               name="email"
@@ -48,8 +49,8 @@ function Signup() {
             />
           </div>
 
-          <div class="input-container">
-            <label for="phone_number">Phone Number</label>
+          <div className="input-container">
+            <label htmlFor="phone_number">Phone Number</label>
             <input
               type="tel"
               name="phone_number"
@@ -58,35 +59,35 @@ function Signup() {
             />
           </div>
 
-          <div class="input-container">
-            <label for="password">Password</label>
+          <div className="input-container">
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
               id="password"
               required
-              minlength="3"
+              minLength="3"
             />
           </div>
 
-          <div class="input-container">
-            <label for="confirm_password">Confirm Password</label>
+          <div className="input-container">
+            <label htmlFor="confirm_password">Confirm Password</label>
             <input
               type="password"
               name="confirm_password"
               id="confirm_password"
               required
-              minlength="3"
+              minLength="3"
             />
           </div>
 
           <div id="btn">
-            <button type="submit" class="submit-btn">Create Account</button>
+            <button onClick={handleButtonCreate} type="submit" className="submit-btn">Create Account</button>
 
-            <div class="btn-text">
+            <div className="btn-text">
               Already have an account?
               
-              <a onClick={handleButtonClick} class="btn-text-highlight" ahref="" >Log in</a>
+              <a onClick={handleButtonLogin} className="btn-text-highlight" ahref="" > Log in</a>
             </div>
           </div>
         </div>

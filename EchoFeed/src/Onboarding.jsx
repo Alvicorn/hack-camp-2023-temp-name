@@ -1,90 +1,92 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import './Onboarding.css'
+import { useNavigate } from 'react-router-dom';
 
-function Signup() {
+function Onboarding() {
+
+  const navigate = useNavigate();
+
+  const handleButtonHome = () => {
+    navigate('/home');
+  };
+
+  // const buttons = document.querySelectorAll('.btn');
+  // buttons.forEach(button => {
+  //   button.addEventListener('click', () => {
+  //     button.classList.add('active');
+  //     alert('Button clicked!');
+  //   });
+  // });
+
+
 
   return (
     <>
       <div id="container">
-        <div id="padding-image-div">
-        <div id="image-sec">
-            <div class="logo">EchoFeed</div>
-            <img src={logoImg} alt="The logo of EchoFeed" />
-        </div>
-      </div>
-
-      <form action="" method="">
-        <div id="login-sec">
-          <h1 class="form-header">Welcome to EchoFeed!</h1>
-
-          <div class="input-container">
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name" required />
+        <div id='content'>
+          <div className='maintext'>
+            What news do <span id='underline'> you </span> want to see?
           </div>
 
-          <div class="input-container">
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name" required />
-          </div>
+          <div id='options'>
+          
+          <div className='buttonbox'>
 
-          <div class="input-container">
-            <label for="user_email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="user_email"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-
-          <div class="input-container">
-            <label for="phone_number">Phone Number</label>
-            <input
-              type="tel"
-              name="phone_number"
-              id="phone_number"
-              placeholder="(XXX)-XXX-XXXX"
-            />
-          </div>
-
-          <div class="input-container">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              required
-              minlength="3"
-            />
-          </div>
-
-          <div class="input-container">
-            <label for="confirm_password">Confirm Password</label>
-            <input
-              type="password"
-              name="confirm_password"
-              id="confirm_password"
-              required
-              minlength="3"
-            />
-          </div>
-
-          <div id="btn">
-            <button type="submit" class="submit-btn">Create Account</button>
-
-            <div class="btn-text">
-              Already have an account?
-              
-              <a class="btn-text-highlight" href="https://www.w3schools.com">Log in</a>
+            <div className='category'>Category 1</div>
+            <div className='buttonlayout'>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 3</label>
             </div>
           </div>
+
+          <div className='buttonbox'>
+          <div className='category'>Category 2</div>
+          <div className='buttonlayout'>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 3</label>
+            </div>
+          </div>
+
+          <div className='buttonbox'>
+          <div className='category'>Category 3</div>
+          <div className='buttonlayout'>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 3</label>
+            </div>
+          </div>
+
+          <div className='buttonbox'>
+          <div className='category'>Category 4</div>
+          <div className='buttonlayout'>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off"/>
+            <label class="btn" for="btn-check-4">Button 3</label>
+            </div>
+          </div>
+
+          </div>
+
         </div>
-      </form>
+
+        <button onClick={handleButtonHome} id='next'>Next</button>
+
     </div>
     </>
   )
 }
 
-export default Signup
+export default Onboarding

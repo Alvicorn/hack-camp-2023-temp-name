@@ -5,7 +5,6 @@ import './App.css'
 import News from './News.jsx'
 import Player from './Player.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
 
 
 function App() {
