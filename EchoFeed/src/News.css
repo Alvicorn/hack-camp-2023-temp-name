@@ -1,63 +1,37 @@
-
-/* News container */
-
 .news-container {
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Set your desired background color */
-  }
+  flex: 0 0 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; 
+}
 
-  /* Image container */
-  
-  .image-container {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-  }
-  
-  .news-image {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  
-  /* Content container */
-  .content-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex: 2;
-    padding: 15px;
-  }
-  
-  .news-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.5rem;
-    color: #888;
-  }
-  
-  .news-category {
-    color: #888;
-  }
-  
-  .news-button {
-    background-color: #3498db; /* Set your desired button color */
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .news-button:hover {
-    background-color: #2980b9; /* Set your desired hover color */
-  }
+.news-container:hover {
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.news-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.news-category {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.news-play {
+  width: 50px; /* Adjust the width of the play button */
+  height: 50px; /* Adjust the height of the play button */
+}
   

@@ -13,12 +13,14 @@ function News(props) {
     return (
         <>
         <div className="news-container" onClick={() => onClick({title, category, summary, linkFull})}>
-            <div className="content-container col-8">
-                <h2 className="news-title">{title}</h2>
-                <p className="news-category">{category}</p>
-                {/* insert play button here */}
-                {/* <p className="news-summary">{summary}</p> */}
-                <img src={playcircle} alt="Play" className="news-play" />
+            <div className="content-container">
+                <div className="content-upper">
+                    <h2 className="news-title">{title}</h2>
+                    <p className="news-category">{category}</p>
+                </div>
+                <div className = "content-lower">
+                    <img src={playcircle} alt="Play" className="news-play" />
+                </div>
             </div>
         </div>
         </>

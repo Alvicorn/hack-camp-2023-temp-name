@@ -1,9 +1,38 @@
-.player-container {
+.player-default-inside-container {
     padding: 20px;
-    background-color: #B9DBCF;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-actual-inside-container {
+    padding: 20px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .default-image-container img {
-    width: auto;
+    max-width: 100%;
     height: auto;
+}
+
+.default-text-container p {
+    text-align: center;
+}
+
+.player-lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
 }

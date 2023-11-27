@@ -20,10 +20,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  overflow: hidden;
-  background-color: var(--Back1);
-}
 
 /* Main Container */
 
