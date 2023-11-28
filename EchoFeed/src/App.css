@@ -52,8 +52,9 @@
 }
 
 #smaller {
-  background-color: #B9DBCF;
+  background-color: #2C5144;
   font-size: larger;
+  color: white;
 }
 
 .player-container {
