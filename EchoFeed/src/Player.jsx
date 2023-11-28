@@ -56,7 +56,7 @@ function Player(props) {
                     </div>
                 </div>
                 <div className="player-lower"> {/* Your reader button or any other content specific to the Player */}
-                        <button className="player-button" onClick={speakSummary}>Play</button>
+                        <button className="player-button" onClick={speakSummary}></button>
                 </div>
             </div>
         )}

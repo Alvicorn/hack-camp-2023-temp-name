@@ -28,11 +28,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.player-title {
+    color: #2C5144;
+
+}
+
 .player-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: white;
+    padding: 20px 20px;
+    border: none;
+    background: url("assets/play_circle.png") center/contain;
 }

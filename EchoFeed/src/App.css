@@ -27,7 +27,7 @@
   margin-bottom: 20px;
 }
 
-.app-header-right {
+/* .app-header-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,8 +37,10 @@
 .app-header-right-text {
   margin-bottom: 0;
   font-weight: bold;
-}
+} */
 
+/* 
+remove text option buttons for now
 .app-header-text-buttons {
   display: flex;
   justify-content: center;
@@ -55,7 +57,7 @@
   background-color: #2C5144;
   font-size: larger;
   color: white;
-}
+} */
 
 .player-container {
   flex: 0 0 30%;
