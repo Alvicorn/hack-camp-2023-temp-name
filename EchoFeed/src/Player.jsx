@@ -28,7 +28,7 @@ function Player(props) {
         <>
         
         {defaultState && (
-            <div className="player-container">
+            <div className="player-default-inside-container">
                 <div className="default-image-container">
                     {/* Render the image only if it's the default state */}
                     <img src={defaultImage} alt="Default Image" />
@@ -40,22 +40,23 @@ function Player(props) {
         )}
         
         {!defaultState && (
-            <div className="player-container">
-                <div className="player-category">
-                    <h3>{category}</h3>
+            <div className="player-actual-inside-container">
+                <div className="player-upper">
+                    <div className="player-category">
+                        <h5>{category}</h5>
+                    </div>
+                    <div className="player-title">
+                        <h3>{title}</h3>
+                    </div>
+                    <div className="player-summary">
+                        <p>{summary}</p>
+                    </div>
+                    <div className="player-link">
+                        <a href={linkFull} target="_blank" rel="noreferrer">Read Full Article</a>
+                    </div>
                 </div>
-                <div className="player-title">
-                    <h1>{title}</h1>
-                </div>
-                <div className="player-summary">
-                    <p>{summary}</p>
-                </div>
-                <div className="player-link">
-                    <a href={linkFull} target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-                <div className="player-reader">
-                    {/* Your reader button or any other content specific to the Player */}
-                    <button className="news-button" onClick={speakSummary}>Reader</button>
+                <div className="player-lower"> {/* Your reader button or any other content specific to the Player */}
+                        <button className="player-button" onClick={speakSummary}></button>
                 </div>
             </div>
         )}
